@@ -1,0 +1,90 @@
+:root{
+    --primary-color: #000000;
+    --primary-background-color: #d4d7dc ;
+    --primary-border-color: #919fa6;
+
+    --secondary-color: #3c3c3c;
+    --secondary-background-color: #0660b0;
+    --secondary-border-color: #5899f4;
+
+    --tirtiary-color: #2d2d2d;
+    --tirtiary-background-color: #759ef0;
+    --tirtiary-border-color: #4478e0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body{
+    background: linear-gradient(0deg, var(--tirtiary-background-color) 90%, var(--secondary-background-color));
+    height: 100%;
+    background-repeat: no-repeat;
+}
+
+.completion, .container{
+    width: 20em;
+    margin: auto;
+    margin-top: 10%;
+    border: 2px solid var(--primary-border-color);
+    background-color: var(--primary-background-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.completion{
+    min-width: min-content;
+    margin-top: 3em;
+    padding: 1em;
+}
+
+.container{
+    padding: 10px;
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0 20px 0;
+}
+
+.btn:hover{
+    transform: translateY(-0.25em);
+    transition: translateY 1000ms;
+}
+
+.hide{
+    display: none !important;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3; 
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 1.5s linear infinite;
+}
+
+.spinner-container{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
